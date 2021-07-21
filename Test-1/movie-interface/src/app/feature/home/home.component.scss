@@ -1,0 +1,24 @@
+.card-img-top{
+  max-width: 100%;
+  max-height: 50%;
+}
+.card-title{
+  font-size: 16px;
+}
+.row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: 300px;
+  margin: 20px 0 50px;
+  .card-img-top{
+    max-height: 150px;
+    object-fit: contain;
+  }
+  .card-title{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,75 @@
+<div class="container detail">
+  <div class="row">
+    <div class="col-6">
+      <h2>{{movieData.Title}}</h2>
+      <span>{{movieData.Year}}</span>
+      <span> {{movieData.Rated}}</span>
+    </div>
+    <div class="col">
+      <h5>POPULARITY</h5>
+      <span>2020</span>
+    </div>
+    
+    <div class="col genre">
+      <dt>IMB Rating</dt>
+      <span>{{movieData.imdbRating}}/10</span>
+    </div>
+    
+    <div class="col genre">
+      <dt>IMB Votes</dt>
+      <span>{{movieData.imdbVotes}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <figure>
+      <img src="{{movieData.Poster}}" alt="">
+    </figure>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="genre">
+        <dt>Released</dt>
+        <p>{{movieData.Released}}</p>
+        <dt>Genre</dt>
+        <span>{{movieData.Genre}}</span>
+      </div>
+      <div class="plot">
+        <dt>Plot</dt>
+        <p>{{movieData.Plot}}</p>
+        <dt>Run Time</dt>
+        <p>{{movieData.Runtime}}</p>
+      </div>
+      <div class="actor">
+        <p>{{movieData.Actors}}</p>
+      </div>
+      <div class="actor">
+        <dt>Director</dt>
+        <p>{{movieData.Director}}</p>
+        <dt>Writer</dt>
+        <p>{{movieData.Writer}}</p>
+        <dt>Language</dt>
+        <p>{{movieData.Language}}</p>
+        <dt>Country</dt>
+        <p>{{movieData.Country}}</p>
+        <dt>Awards</dt>
+        <p>{{movieData.Awards}}</p>
+      </div>
+    </div>
+    <div class="col-6">
+      
+      <div class="review">
+        <dt>Plot</dt>
+        <p>{{movieData.Plot}}</p>
+      </div>
+      <div class=" genre">
+        <dt>IMB Rating</dt>
+        <span>{{movieData.imdbRating}}/10</span>
+      </div>
+      
+      <div class=" genre">
+        <dt>IMB Votes</dt>
+        <span>{{movieData.imdbVotes}}</span>
+      </div>
+    </div>
+  </div>
+</div>

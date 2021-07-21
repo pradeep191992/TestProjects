@@ -1,0 +1,39 @@
+::ng-deep{
+
+  body{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      background-color: #fff;
+      margin: auto;
+      border-radius: 8px;
+      padding-top: 10px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  }
+  .alert{
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
+  .form{
+    margin: 0 40px;
+    color: #808080;
+    .btn{
+      display: block;
+      width: 100%;
+      padding: 15px;
+    }
+    .form-control{
+      padding: 15px;
+      background-color: #f4f4f4;
+    }
+  }
+}
+

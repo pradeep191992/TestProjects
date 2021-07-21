@@ -1,0 +1,22 @@
+.w-70 {
+  width: 65%;
+}
+.w-30 {
+  width: 30%;
+}
+.custom-form-group{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.block{
+  font-size: 16px;
+  display: block;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.error{
+  input{
+    border-color: red;
+  }
+}
