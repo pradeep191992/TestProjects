@@ -6,7 +6,7 @@
         <div class="card-body">
           <h4 class="card-title">{{item.Type}} {{item.Title}}</h4>
           <p class="card-text">{{item.Year}}</p>
-          <a [routerLink]="['/detail/', item.imdbID]" class="btn btn-primary" id="{{item.imdbID}}" (click)="goToDetail(item.imdbID)">View Detail</a>
+          <a [routerLink]="['/detail/', item.Title]" [queryParams]="{'id': item.imdbID}" class="btn btn-primary" id="{{item.imdbID}}" (click)="goToDetail(item.imdbID)">View Detail</a>
         </div>
       </div>
     </div>

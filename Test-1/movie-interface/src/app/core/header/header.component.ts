@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   searchData: any;
+  showDropDown = false;
   constructor(
     public movieService: MovieService,
   ) { }
@@ -15,10 +16,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  dropDownClose(reset: any){
+    this.showDropDown = false;
+    reset.value = '';
+  }
+
+
   searchMovie(keyWord: any) {
     console.log(keyWord.value);
     this.movieService.searchListOfMovie(keyWord.value).subscribe(data => {
       console.log(data);
+      this.showDropDown = true;
       this.searchData = data;
     })
   }

@@ -19,9 +19,9 @@
     <div class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" (ngModelChange)="searchMovie(keyWord)" ngModel="" type="search" #keyWord placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchMovie(keyWord)" type="submit">Search</button>
-      <ul class="dropdown-list">
+      <ul class="dropdown-list" *ngIf="showDropDown">
         <li class="dropdown-list-item" *ngFor="let item of searchData.Search">
-          <a class="nav-link" [routerLink]="['/detail/', item.Title]" [queryParams]="{'id': item.imdbID}">{{item.Title}}</a>
+          <a class="nav-link" [routerLink]="['/detail/', item.Title]" [queryParams]="{'id': item.imdbID}" (click)="dropDownClose(keyWord)">{{item.Title}}</a>
         </li>
       </ul>
     </div>

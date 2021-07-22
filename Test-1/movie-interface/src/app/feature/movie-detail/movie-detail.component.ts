@@ -23,7 +23,6 @@ export class MovieDetailComponent implements OnInit {
         console.log(data);
       });
     });
-
   }
 
 }

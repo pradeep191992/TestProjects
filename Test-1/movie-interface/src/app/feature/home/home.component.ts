@@ -1,12 +1,12 @@
 import { MovieService } from './../../service/movie.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges {
   movieListData: any;
   constructor(
     public movieService: MovieService
@@ -21,6 +21,14 @@ export class HomeComponent implements OnInit {
 
   goToDetail(event: any){
     console.log(event);
+  }
+
+  ngOnChanges() {
+    debugger
+    this.movieService.getListOfMovieDetails().subscribe(data => {
+      this.movieListData = data;
+      console.log(data);
+    })
   }
 
 }
