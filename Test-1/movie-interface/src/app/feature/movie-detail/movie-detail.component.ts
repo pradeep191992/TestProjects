@@ -16,22 +16,14 @@ export class MovieDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = this.activateRouter.snapshot.paramMap.get('title');
-    // this.activateRouter.paramMap.subscribe(id => { 
-      // this.id = id;
+    this.activateRouter.queryParams.subscribe((params: Params) => { 
+      this.id = params.id;
       this.movieService.getMovieDetails(this.id).subscribe(data => {
         this.movieData = data;
         console.log(data);
-      });  
-    // });
+      });
+    });
 
-
-
-
-    // this.movieService.getMovieDetails().subscribe(data => {
-    //   this.movieData = data;
-    //   console.log(data);
-    // })
   }
 
 }
