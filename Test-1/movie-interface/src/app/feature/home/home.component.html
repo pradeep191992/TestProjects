@@ -1,14 +1,16 @@
-<div class="container">
+<section class="container">
   <div class="row">
-    <div class="col" *ngFor="let item of movieListData.Search">
+    <article class="col" *ngFor="let item of movieListData.Search">
       <div class="card">
-        <img class="card-img-top" src="{{item.Poster}}" alt="Card image">
+        <figure class="figure">
+          <img class="card-img-top" src="{{item.Poster}}" alt="Card image">
+        </figure>
         <div class="card-body">
           <h4 class="card-title">{{item.Type}} {{item.Title}}</h4>
           <p class="card-text">{{item.Year}}</p>
           <a [routerLink]="['/detail/', item.Title]" [queryParams]="{'id': item.imdbID}" class="btn btn-primary" id="{{item.imdbID}}" (click)="goToDetail(item.imdbID)">View Detail</a>
         </div>
       </div>
-    </div>
+    </article>
   </div>
-</div>
+</section>

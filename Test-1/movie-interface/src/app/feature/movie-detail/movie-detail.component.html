@@ -1,75 +1,81 @@
-<div class="container detail">
+<section class="container detail">
   <div class="row">
     <div class="col-6">
       <h2>{{movieData.Title}}</h2>
       <span>{{movieData.Year}}</span>
       <span> {{movieData.Rated}}</span>
     </div>
-    <div class="col">
+    <!-- <div class="col">
       <h5>POPULARITY</h5>
       <span>2020</span>
-    </div>
+    </div> -->
     
     <div class="col genre">
-      <dt>IMB Rating</dt>
+      <strong>IMB Rating: &nbsp;</strong>
       <span>{{movieData.imdbRating}}/10</span>
     </div>
     
     <div class="col genre">
-      <dt>IMB Votes</dt>
+      <strong>IMB Votes: &nbsp;</strong>
       <span>{{movieData.imdbVotes}}</span>
     </div>
   </div>
-  <div class="row">
-    <figure>
-      <img src="{{movieData.Poster}}" alt="">
-    </figure>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <div class="genre">
-        <dt>Released</dt>
-        <p>{{movieData.Released}}</p>
-        <dt>Genre</dt>
-        <span>{{movieData.Genre}}</span>
-      </div>
-      <div class="plot">
-        <dt>Plot</dt>
-        <p>{{movieData.Plot}}</p>
-        <dt>Run Time</dt>
+  <div class="row strip">
+    <div class="col flex justify">
+      <div class="flex">
+        <strong>Run Time: &nbsp;</strong>
         <p>{{movieData.Runtime}}</p>
       </div>
-      <div class="actor">
-        <p>{{movieData.Actors}}</p>
-      </div>
-      <div class="actor">
-        <dt>Director</dt>
-        <p>{{movieData.Director}}</p>
-        <dt>Writer</dt>
-        <p>{{movieData.Writer}}</p>
-        <dt>Language</dt>
-        <p>{{movieData.Language}}</p>
-        <dt>Country</dt>
-        <p>{{movieData.Country}}</p>
-        <dt>Awards</dt>
+      <div class="flex">
+        <strong>Awards: &nbsp;</strong>
         <p>{{movieData.Awards}}</p>
       </div>
     </div>
-    <div class="col-6">
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <figure>
+        <img src="{{movieData.Poster}}" alt="">
+      </figure>
+    </div>
+    <div class="col-8">
+      <div class="genre flex">
+        <strong>Released: &nbsp;</strong>
+        <p>{{movieData.Released}}</p>
+      </div>
+      <div class="genre flex">
+        <strong>Genre: &nbsp;</strong>
+        <p>{{movieData.Genre}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Actor: &nbsp;</strong>
+        <p>{{movieData.Actors}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Director: &nbsp;</strong>
+        <p>{{movieData.Director}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Writer: &nbsp;</strong>
+        <p>{{movieData.Writer}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Language: &nbsp;</strong>
+        <p>{{movieData.Language}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Country: &nbsp;</strong>
+        <p>{{movieData.Country}}</p>
+      </div>
+      <div class="actor flex">
+        <strong>Awards: &nbsp;</strong>
+        <p>{{movieData.Awards}}</p>
+      </div>
       
-      <div class="review">
-        <dt>Plot</dt>
+      <div class="plot">
+        <strong>Plot: &nbsp;</strong>
         <p>{{movieData.Plot}}</p>
-      </div>
-      <div class=" genre">
-        <dt>IMB Rating</dt>
-        <span>{{movieData.imdbRating}}/10</span>
-      </div>
-      
-      <div class=" genre">
-        <dt>IMB Votes</dt>
-        <span>{{movieData.imdbVotes}}</span>
       </div>
     </div>
   </div>
-</div>
+</section>

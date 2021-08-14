@@ -1,6 +1,9 @@
+.navbar{
+  box-shadow: 2px 3px 10px #636363;
+}
 .form-inline{
   position: relative;
-  width: 50%;
+  width: 80%;
   .form-control{
     width: calc(100% - 100px);
   }
@@ -9,12 +12,51 @@
     position: absolute;
     top: 100%;
     left: 0;
-    max-height: 190px;
+    max-height: 400px;
     margin: 0;
     padding: 0;
     background: #fff;
     z-index: 1;
     box-shadow: 0 12px 20px #ccd;
     overflow-y: auto;
+    width: 100%;
+  }
+}
+.nav-link{
+  color: #f4f4f4;
+}
+.cnav-link{
+  display: grid;
+  grid-template-columns: 70px calc(100% - 80px);
+  grid-template-rows: repeat(3, 24px);
+  grid-gap: 0 10px;
+  color: #f4f4f4;
+  background: #252525;
+  border-bottom: 1px solid #9d9d9d;
+  &:hover{
+    background-color: #4f4f4f;
+  }
+  .poster{
+    grid-row-end: span 3;
+    margin: 0;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .title{
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+  }
+  .sub-title{
+    margin: 0;
+    font-weight: normal;
+    color: inherit;
   }
 }

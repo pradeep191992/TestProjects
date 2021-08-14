@@ -21,11 +21,11 @@ export class MovieService {
   ) { }
 
   getMovieDetails(id: any): Observable<MovieInterfaceModel> {
-    return this.http.get<MovieInterfaceModel>(this.url+'i='+id+'&apikey='+this.apiKey);
+    return this.http.get<MovieInterfaceModel>(this.url+'i='+id+'&plot=full'+'&apikey='+this.apiKey);
   }
 
   getListOfMovieDetails(): Observable<MovieInterfaceModel> {
-    return this.http.get<MovieInterfaceModel>(this.url+'s=2012&apikey='+this.apiKey);
+    return this.http.get<MovieInterfaceModel>(this.url+'s=batman&apikey='+this.apiKey);
   }
 
   searchListOfMovie(keyWord: any): Observable<MovieInterfaceModel> {
