@@ -25,7 +25,7 @@ export class MovieService {
   }
 
   getListOfMovieDetails(): Observable<MovieInterfaceModel> {
-    return this.http.get<MovieInterfaceModel>(this.url+'s=batman&apikey='+this.apiKey);
+    return this.http.get<MovieInterfaceModel>(this.url+'s=batman&page=2&apikey='+this.apiKey);
   }
 
   searchListOfMovie(keyWord: any): Observable<MovieInterfaceModel> {

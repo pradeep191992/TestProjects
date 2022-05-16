@@ -1,0 +1,10 @@
+<div class="card bg-white relative w-full h-full flex flex-col rounded-lg overflow-hidden">
+  <figure class="figure">
+    <img class="card-img-top h-full w-full" src="{{searchData.Poster}}" alt="Card image">
+  </figure>
+  <div class="card-body flex flex-col gap-2 justify-between h-full p-2">
+    <h4 class="card-title text-16r">{{searchData.Type}} {{searchData.Title}}</h4>
+    <p class="card-text text-12r my-auto">Release Year {{searchData.Year}}</p>
+    <a [routerLink]="['/detail/', searchData.Title]" [queryParams]="{'id': searchData.imdbID}" class="btn btn-primary block text-slb-blue-600 cursor-pointer" id="{{searchData.imdbID}}" (click)="goToDetail(searchData.imdbID)">View Detail of Movie</a>
+  </div>
+</div>

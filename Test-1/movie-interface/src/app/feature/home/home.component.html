@@ -1,16 +1,5 @@
-<section class="container">
-  <div class="row">
-    <article class="col" *ngFor="let item of movieListData.Search">
-      <div class="card">
-        <figure class="figure">
-          <img class="card-img-top" src="{{item.Poster}}" alt="Card image">
-        </figure>
-        <div class="card-body">
-          <h4 class="card-title">{{item.Type}} {{item.Title}}</h4>
-          <p class="card-text">{{item.Year}}</p>
-          <a [routerLink]="['/detail/', item.Title]" [queryParams]="{'id': item.imdbID}" class="btn btn-primary" id="{{item.imdbID}}" (click)="goToDetail(item.imdbID)">View Detail</a>
-        </div>
-      </div>
-    </article>
+<section class="max-w-7xl m-auto p-6">
+  <div class="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <app-movie-card class="flex w-full h-full shadow-btn" *ngFor="let item of movieListData.Search" [searchData]="item"></app-movie-card>
   </div>
 </section>
