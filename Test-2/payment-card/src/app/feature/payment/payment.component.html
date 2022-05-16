@@ -1,37 +1,37 @@
 <div class="form">
-  <form #templateVariableName="ngForm" (ngSubmit)="formSubmit(templateVariableName)">
+  <form [formGroup]="form" (ngSubmit)="formSubmit()">
     <p>Fill this Form with your credit card details.</p>
     <div class="custom-form-group" >
-      <div class="form-group w-70" [ngClass]="{'error' : cardNumber.touched && cardNumber.invalid}">
+      <div class="form-group w-70" [ngClass]="{'error' : f.cardNumber.touched && f.cardNumber.invalid}">
         <label for="exampleInputEmail1">Card Number</label>
-        <input type="number" minlength="16" class="form-control"  name="cardNumber" #cardNumber="ngModel" required ngModel="">
-        <div *ngIf="cardNumber.invalid && (cardNumber.errors?.minlength || cardNumber.touched)" class="alert">
-          <div *ngIf="cardNumber.errors?.required">  Card Nubmer is required.</div>
-          <div *ngIf="cardNumber.errors?.minlength"> Card Nubmer must be at least 16 characters long.</div>
+        <input type="number" minlength="16" class="form-control"  name="cardNumber" formControlName="cardNumber" required>
+        <div *ngIf="f.cardNumber.invalid && (f.cardNumber.errors?.minlength || f.cardNumber.touched)" class="alert">
+          <div *ngIf="f.cardNumber.errors?.required">  Card Nubmer is required.</div>
+          <div *ngIf="f.cardNumber.errors?.minlength"> Card Nubmer must be at least 16 characters long.</div>
         </div>
         
       </div>
       <div class="form-group w-30">
         <label for="exampleInputEmail1">Expire</label>
-        <input type="text" class="form-control" name="cardexpire" required ngModel=""  #cardexpire="ngModel">
-        <div *ngIf="cardexpire.invalid && (cardexpire.dirty || cardexpire.touched)" class="alert">
-          <div *ngIf="cardexpire.errors?.required">  Card Expirey is required.</div>
+        <input type="date" class="form-control" name="cardexpire" formControlName="cardexpire" required>
+        <div *ngIf="f.cardexpire.invalid && (f.cardexpire.dirty || f.cardexpire.touched)" class="alert">
+          <div *ngIf="f.cardexpire.errors?.required">  Card Expirey is required.</div>
         </div>
       </div>
     </div>
     <div class="custom-form-group">
       <div class="form-group w-70">
         <label for="exampleInputEmail1">Name on Card</label>
-        <input type="text" class="form-control" name="cardname" required ngModel="" #cardname="ngModel">
-        <div *ngIf="cardname.invalid && (cardname.dirty || cardname.touched)" class="alert">
-          <div *ngIf="cardname.errors?.required">  Card Name is required.</div>
+        <input type="text" class="form-control" name="cardname" formControlName="cardname" required>
+        <div *ngIf="f.cardname.invalid && (f.cardname.dirty || f.cardname.touched)" class="alert">
+          <div *ngIf="f.cardname.errors?.required">  Card Name is required.</div>
         </div>
       </div>
       <div class="form-group w-30">
         <label for="exampleInputEmail1">Code</label>
-        <input type="text" class="form-control" name="cardCode" required ngModel="" #cardCode="ngModel">
-        <div *ngIf="cardCode.invalid && (cardCode.dirty || cardCode.touched)" class="alert">
-          <div *ngIf="cardCode.errors?.required">  Card Code is required.</div>
+        <input type="text" class="form-control" name="cardCode" formControlName="cardCode" required>
+        <div *ngIf="f.cardCode.invalid && (f.cardCode.dirty || f.cardCode.touched)" class="alert">
+          <div *ngIf="f.cardCode.errors?.required">  Card Code is required.</div>
         </div>
       </div>
     </div>
